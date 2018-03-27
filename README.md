@@ -47,3 +47,7 @@ make
 https://kaitai.io
 
 http://kaitai.io/#download
+
+Web IDE: https://ide.kaitai.io/
+
+Docs: http://doc.kaitai.io/
