@@ -1,7 +1,8 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
-#include "animal_record.h"
+#include "png.h"
 
 int main(int argc, char **argv)
 {
@@ -10,10 +11,17 @@ int main(int argc, char **argv)
 
 	std::ifstream ifs(argv[1], std::ifstream::binary);
 	kaitai::kstream ks(&ifs);
-	animal_record_t animal = animal_record_t(&ks);
+	png_t png = png_t(&ks);
 
-	std::cout << "name:\t" << animal.name() << '\n';
-	std::cout << "weight:\t" << animal.weight() << '\n';
+
+
+	std::string magic = png.magic();
+	std::cout << magic;
+
+	png_t::ihdr_chunk_t* ihdr = png.ihdr();
+
+	std::cout << ihdr->width() << " x " << ihdr->height() << ", bitdepth: " << std::to_string(ihdr->bit_depth()) << '\n';
+
 
 	return 0;
 }
