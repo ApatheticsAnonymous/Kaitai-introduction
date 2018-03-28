@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
-project(projname CXX)
+project(animalparser CXX)
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
-find_package(Iconv REQUIRED)
+#find_package(Iconv REQUIRED)
 
 add_custom_command(
 	OUTPUT animal_record.cpp animal_record.h
@@ -44,5 +44,5 @@ target_link_libraries(
 target_compile_definitions(
 	${PROJECT_NAME}
 	PRIVATE
-	-DKS_STR_ENCODING_ICONV
+	-DKS_STR_ENCODING_NONE
 )
