@@ -24,12 +24,14 @@ sudo apt-get install kaitai-struct-compiler
 ```
 
 ### macOS
-
-```brew install kaitai-struct-compiler
 ```
+brew install kaitai-struct-compiler
+```
+
 ### Windows
+MSI - https://dl.bintray.com/kaitai-io/universal/0.8/kaitai-struct-compiler-0.8.msi
 
-
+## Build
 ```
 cd Kaitai-introduction
 mkdir build; cd build
