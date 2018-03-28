@@ -4,7 +4,8 @@ Training materials on a Kaitai Struct introduction workshop
 # Contents
 
 * doc
-* Samples
+* res
+* specs
 * src
 
 # Building
